@@ -67,9 +67,13 @@ Branch Management:
 	git merge branchName: to merge two same files, that are found in 2 different branches
 	git push aliasName -all #to push changes to all branches
 	
+	fetching: 
+		git fetch aliasName brnachName
+	
+	checking what is in the remote repository and our local branch
+		<< git diff alias/branchName >>
+	
+	if changes are ok, we can merge using 
+		<< git merge alias/branchName >>
+	
 =================================================================================
-
-
-
-
-
