@@ -1,0 +1,53 @@
+#terms
+AAA : Authentication, Accountability, Availability
+
+# << git commit -a -m "message" >> to add all modifications and commit directly 
+
+#things to consider before committing: 
+- create token and set required privileges 
+ 	steps to create token: 
+ 		- on your profile image, click and go on settings
+ 		- scroll at the bottom and click on developer settings
+ 		- choose the personal access tokens button and choose the classic one
+ 		- place a note and the required permissions for those having that token
+ 		
+
+===================================================================================
+
+Steps to Push Over First project: 
+
+1. Create directory for deployment #using the mkdir command
+2. Initialize the directory to keep track of any changes in the files #using the git init command 
+3. Provide your credentials info so that when committing the author can be Identify
+4. Use the << git add >> command to add records so that they should be able to be committed
+5. Commit the files using << git commit -m >> command then to the staging area so that you should be able to push it to the git repository.
+	Areas in git :
+	staging Area: Where your code goes to when committed 
+	#when committed, a version of the file is created
+
+nb: << git log >> command to view our commit infos
+    use the << git show commitID >> to view all changes that took place in a commit. 
+    
+6. to prepare items to be sent to github, we use the << git remote add origin websiteLink >>
+
+NB: Create a token before you are able to push. 
+
+7. To push now, we use << git push aliasName branchName >>
+
+
+#My created token 
+	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
+
+
+=================================================================================
+
+Pulling in git: 
+#command
+	<< git pull alias branchname >>
+	
+
+
+
+
+
+
