@@ -1,3 +1,5 @@
+
+
 #terms
 AAA : Authentication, Accountability, Availability
 
@@ -12,7 +14,7 @@ AAA : Authentication, Accountability, Availability
  		- place a note and the required permissions for those having that token
  		
 
-===================================================================================
+=================================================================================
 
 Steps to Push Over First project: 
 
@@ -45,7 +47,27 @@ Pulling in git:
 #command
 	<< git pull alias branchname >>
 	
+	
+	Qs:
+	- which scenario is best to use git fetch or git pull? and why?
+	merging scenario between a branch and another
+	- is master branch by default?
+	
+=================================================================================
 
+Branch Management:
+
+	Creating a New branch 
+		<< git branch branchName >>
+	Switch from branch to another
+		<< git switch branchName >> #branch automatically becomes main branch
+	git Diff:  command is use to fine the difference between 2 same files 
+	QI: is it a must to be in the master before merging
+	    can we rename a branch?
+	git merge branchName: to merge two same files, that are found in 2 different branches
+	git push aliasName -all #to push changes to all branches
+	
+=================================================================================
 
 
 
