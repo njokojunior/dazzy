@@ -38,12 +38,26 @@ NB: Create a token before you are able to push.
 
 
 #My created token 
-	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
+	
+	group12: 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
 
 
-=================================================================================
+================================================================================
 
 Pulling in git: 
+
+- create a directory and initialise git inside 
+- link the remote to the your repository
+- git pull using the branch # (Make sure you are on thesame branch)
+
+questions: 
+- the git repository that is pulled, does it overrides the initial infos of the existing repos? #no
+
+- the pull request where a confirmation is needed is it applicable for all team members? 
+
+
+
+
 #command
 	<< git pull alias branchname >>
 	
@@ -53,7 +67,7 @@ Pulling in git:
 	merging scenario between a branch and another
 	- is master branch by default?
 	
-=================================================================================
+================================================================================
 
 Branch Management:
 
@@ -61,6 +75,12 @@ Branch Management:
 		<< git branch branchName >>
 	Switch from branch to another
 		<< git switch branchName >> #branch automatically becomes main branch
+		
+	
+	git config --global init.defaultBranch development: to install default git branch
+	
+	git branch -m branchName: to add new branch
+	
 	git Diff:  command is use to fine the difference between 2 same files 
 	QI: is it a must to be in the master before merging
 	    can we rename a branch?
@@ -76,4 +96,24 @@ Branch Management:
 	if changes are ok, we can merge using 
 		<< git merge alias/branchName >>
 	
-=================================================================================
+================================================================================Integrated development environment
+
+Questions when working with Oranization: 
+
+
+
+Critical steps: 
+1. Do not jump from one step to another in terms of branching # a code that moves from dev to master is not proper. It must pass through stage first. 
+
+
+
+Creating a bugfixed branch from the master branch: from creating a new branch bug_fix while using master branch, we fix the code and submit back to master branch. If the bugs are much, we have to fix the files and send it back to the development branch so that the code should be taken all over and be fix completely.  
+
+#Research on git work_Flow
+
+.gitignore files are used to ignored files in our id that are not part of our project
+
+
+
+
+
