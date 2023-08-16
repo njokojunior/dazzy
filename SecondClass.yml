@@ -18,6 +18,7 @@ AAA : Authentication, Accountability, Availability
 
 Steps to Push Over First project: 
 
+
 1. Create directory for deployment #using the mkdir command
 2. Initialize the directory to keep track of any changes in the files #using the git init command 
 3. Provide your credentials info so that when committing the author can be Identify
@@ -39,14 +40,17 @@ NB: Create a token before you are able to push.
 
 #My created token 
 	
-	group12: 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
+	Devops program token access: 
+	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
+	another Token: 
+	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
 
 
 ================================================================================
 
 Pulling in git: 
 
-- create a directory and initialise git inside 
+- create a directory and initialize git inside 
 - link the remote to the your repository
 - git pull using the branch # (Make sure you are on thesame branch)
 
@@ -69,12 +73,30 @@ questions:
 	
 ================================================================================
 
+Handling Commit: 
+#Deleting a commit 
+	<< git reset --hard HEAD~1 >> #it will delete the last updated commit
+	
+	<< git reset --hard HEAD~1 commitID >> #to backup to that specific commit 
+
+
+================================================================================
+
 Branch Management:
 
+
+#to choose the first branch in which you want your commit to go into, use the 
+	<< git config --global init.defaultBranch branchName >> to set the default branch your commit will have 
+#for you to be able to change a branch, you have to commit something 
 	Creating a New branch 
 		<< git branch branchName >>
 	Switch from branch to another
 		<< git switch branchName >> #branch automatically becomes main branch
+	To switch from one branch to another, 
+		<< git checkout branchName >>
+		
+	To view all branches, 
+		<< git branch -a >>
 		
 	
 	git config --global init.defaultBranch development: to install default git branch
@@ -95,16 +117,19 @@ Branch Management:
 	
 	if changes are ok, we can merge using 
 		<< git merge alias/branchName >>
+		
+	After pulling: you have a remote branch and to push back to that remote branch, you need to switch to that branch. You trying to switch to that branch, you need to # << git switch remote_branch_name --detach >>
+	the above code will detach the head from master to the remote branch
 	
 ================================================================================Integrated development environment
 
-Questions when working with Oranization: 
+Questions when working with Organization: 
 
-
+task allocation 
+token control
 
 Critical steps: 
 1. Do not jump from one step to another in terms of branching # a code that moves from dev to master is not proper. It must pass through stage first. 
-
 
 
 Creating a bugfixed branch from the master branch: from creating a new branch bug_fix while using master branch, we fix the code and submit back to master branch. If the bugs are much, we have to fix the files and send it back to the development branch so that the code should be taken all over and be fix completely.  
@@ -112,6 +137,71 @@ Creating a bugfixed branch from the master branch: from creating a new branch bu
 #Research on git work_Flow
 
 .gitignore files are used to ignored files in our id that are not part of our project
+
+Git Important Commands:
+
+git clean -n: shows files to be deleted 
+git clean -f: delete files to be deleted
+git reset: remove files in staging area
+git revert commitID: delete the latest commit files for a specific commit
+
+
+
+Git tags: we create tags to identify our release versions
+		<< git tag tagName >> 
+to push a tag, we do 
+		<< git push origin(aliasName) tag tagName >>
+		
+it is important to create tags when being on a master branch
+to push all tags: << git push alias branch --tags >>
+to delete: << git tag -d tagname >>	
+
+Number of branches 
+dev-> deveolopment
+stage-> testing/QA/UAT environment
+master-> production
+
+when working in teams avoid using git rebase.
+
+we stash to same our ouwn personal work. 
+
+personal tasks: 
+# understand concepts of stash better
+# git merge and git rebase. Git rebase wipe the history and start at a new commit. Git merge on its own mix combines the branches and then they work togther
+
+the git cherry-pick: 
+#if a commit contains few files it is advisable to use cherripick
+is used to merge a single commit
+
+
+topic to check on:
+git stash backup
+
+
+Using ssh to push in github: 
+
+command to create ssh keys to push
+
+1. Create an ssh key on your server and add it to your github account
+	- on your server, create a key using the << ssh keygen >> command e.g ssh-keygen -t rsa
+	
+	<< ssh-keygen -t rsa -b 4096 -C "your_email@example.com" >>  #the 4096 is use to set the size of the key
+
+2. View the key in the .ssh folder (the folder contains the public and private key)
+
+3. Go on your github and select the shh key options under setting in your profile. copy the key in your file and paste it on your github add ssh key option
+
+4. connect your remote to your local server while creating an alias for your ssh key link
+
+Clonning a repository: 
+	command: 
+		<< git clone "address" >>
+		
+
+
+
+
+
 
 
 
